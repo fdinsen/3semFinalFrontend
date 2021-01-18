@@ -16,7 +16,13 @@ function ShowContacts(props) {
     <>
       <Container>
         <Row>
-          {contact ? <ContactDetails contact={contact} resetContact={updateContact} /> : <ContactsList liftContact={updateContact} />}
+          <Col></Col>
+          <Col xs={8} className="mt-3">
+            <div>
+              {contact ? <ContactDetails contact={contact} resetContact={updateContact} /> : <ContactsList liftContact={updateContact} />}
+            </div>
+          </Col>
+          <Col></Col>
         </Row>
       </Container>
     </>

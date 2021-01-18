@@ -10,6 +10,8 @@ import {
 } from 'react-router-dom';
 import Header from './components/Header';
 import facade from './apiFacade';
+import ShowContacts from './components/ShowContacts';
+import CreateContact from './components/CreateContact';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -23,13 +25,16 @@ function App() {
 
   return (
     <>
-      <Header loggedIn={loggedIn} />
+      <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>
       <Switch>
         <Route exact path="/">
           <Home loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
         </Route>
-        <Route path="/dashboard">
-          <DashBoard loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+        <Route path="/contacts">
+          <ShowContacts/>
+        </Route>
+        <Route path="/create">
+          <CreateContact/>
         </Route>
         <Route path="/404">
           <NoMatch />
