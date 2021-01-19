@@ -1,1 +1,1 @@
-export const URL = 'http://localhost:8080/jpareststarter/api';
+export const URL = 'https://fdinsen.com/3SemFinal/api';

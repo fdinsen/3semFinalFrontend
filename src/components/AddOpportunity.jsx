@@ -48,7 +48,7 @@ function ShowContacts(props) {
                 if (err.status == 400) {
                     setError('All fields must be filled.');
                 } else {
-                    setError('Something went wrong while logging in');
+                    setError('Something went wrong creating opportunity');
                 }
             });
         }else {
