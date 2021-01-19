@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Form, Button, Alert, Col, Container, Row, Table } from 'react-bootstrap';
+import { Form, Button, Alert, Col, Container, Row, Table, Card } from 'react-bootstrap';
 import facade from '../apiFacade';
 import { useHistory } from 'react-router-dom';
 
@@ -34,7 +34,7 @@ function ContactsList(props) {
     const buildList = () => {
         return (
             <>
-                <Table striped bordered hover action>
+                <Table hover action>
                     <thead>
                         <tr>
                             <th>#</th>
@@ -68,8 +68,12 @@ function ContactsList(props) {
     return (
         <>
             <div>
-                <h1>Contacts</h1>
+                <h2 style={{ 'text-align': "center" }}>Contacts</h2>
+                <Card>
+                    <Card.Body>
                 {!contacts ? (<p>No contacts found</p>) : buildList()}
+                </Card.Body>
+                </Card>
             </div>
         </>
     )

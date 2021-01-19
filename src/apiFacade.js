@@ -73,7 +73,7 @@ function apiFacade() {
   };
 
   const postContent = (endpoint, content) => {
-    const options = makeOptions("POST", false, content);
+    const options = makeOptions("POST", true, content);
     return fetch(URL + endpoint, options).then(handleHttpErrors);
   };
 
